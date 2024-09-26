@@ -4,7 +4,7 @@ a=$(test $(ps -p $$ -ocomm=) == "sh")
 
 b=true
 
-if [[ $a == true ]]; then
+if [[ "$a" != 0 ]]; then
   echo "Fuck"
 fi
 
