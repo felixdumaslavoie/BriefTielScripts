@@ -1,5 +1,14 @@
 #!/bin/sh
 
+a=$(test $(ps -p $$ -ocomm=) == "sh")
+
+b=true
+
+if [[ $a == true ]]; then
+  echo "Fuck"
+fi
+
+exit 1
 #https://textfancy.com/text-art/
 
 #                   ▄▄             ▄▄▄▄           ▄▄            ▄▄
@@ -11,9 +20,9 @@
 #  ██    ▄█ ██      ██  ██▄    ▄ ██   ▀██▄     ▄▀ ██  ██▄    ▄  ██
 #▄████████▄████▄  ▄████▄ ▀█████▀████▄   ▀▀█████▀▄████▄ ▀█████▀▄████▄
 #
+# -By Flx DL_______
 #▒▄▀▄░█▒░▒█▀▄░█▄█▒▄▀▄░░░█▀█░░░█▀█░▄█
 #░█▀█▒█▄▄░█▀▒▒█▒█░█▀█▒░░█▄█░▄░█▄█░░█
-#
 #█▓▒▒░░░(Zone 0: Base and generics)░░░▒▒▓█
 #
 #8@@8@@@@8@8@@8@@@@@@@@@@@@@@@@X@XXXXXXXXXXXXXXXXXXXXSXXXXXXXXXX@XX@X@X@XX@XXX@X@X@X@@X@X@XX@X@XXXX@XXXXXXXXXXXXXXXXXXSXXSXXXSXSXXXSXSXSXXSXSXSXSXSSS%%
