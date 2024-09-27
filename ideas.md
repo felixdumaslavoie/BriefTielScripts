@@ -1,7 +1,8 @@
 # Ideas 
 
 https://github.com/bashup/mdsh
-https://github.com/ogham/exa
+https://github.com/eza-community/eza?tab=readme-ov-file
+https://github.com/lsd-rs/lsd
 
 ## Aliases ideas
 
