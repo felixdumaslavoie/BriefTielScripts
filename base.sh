@@ -126,3 +126,5 @@ fi
 adduser flx
 
 passwd flx
+
+#disable virtuals desktops option called "overview" in desktop effects settings page. Just turn it off
