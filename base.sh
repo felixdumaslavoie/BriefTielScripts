@@ -173,7 +173,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 #
 wget https://raw.githubusercontent.com/felixdumaslavoie/BriefTielScripts/refs/heads/main/pl10kconf/.p10k.zsh
 wget https://raw.githubusercontent.com/felixdumaslavoie/BriefTielScripts/refs/heads/main/pl10kconf/.zshrc
-
+cp -f .zshrc .p10k.zsh ~/.
 ## Extensive aliases section ;)
 alias gaa="git add --all"
 alias gc="git commit -am "
