@@ -162,6 +162,7 @@ sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.loca
 echo 'kitty.desktop' >~/.config/xdg-terminals.list
 ## End of kitty installation <^-^>
 
+### Shell parts 01010101 XO
 dnf -y install ranger eza zsh htop btop
 #
 # Install oh-my-zsh
@@ -173,5 +174,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ## Extensive aliases section ;)
 alias gaa="git add --all"
 alias gc="git commit -am"
+alias gpm="git push origin main"
 alias ls="eza --icons"
 #disable virtuals desktops option called "overview" in KDE desktop effects settings page. Just turn it off...
