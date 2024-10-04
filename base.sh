@@ -6,7 +6,8 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 #https://textfancy.com/text-art/
-
+mkdir ~/.flxworkdir
+cd ~/.flxworkdir
 #                   ▄▄             ▄▄▄▄           ▄▄            ▄▄
 #▀███▀▀▀██▄         ██           ▄█▀ ▀▀ ▄▄█▀▀▀█▄█ ██          ▀███
 #  ██    ██                      ██▀  ▄██▀     ▀█               ██
@@ -123,9 +124,10 @@ adduser flx
 
 passwd flx
 
-## Making sure git is there...
-dnf -y install git
+### Shell parts 01010101 XO
 
+## Making sure everything is there...
+dnf -y install git wget ranger eza zsh htop btop
 ## NEOVIM Instalation section ###
 # Sources:
 # https://fedoramagazine.org/configuring-neovim-on-fedora-as-an-ide-and-using-lazyvim/
@@ -162,8 +164,6 @@ sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.loca
 echo 'kitty.desktop' >~/.config/xdg-terminals.list
 ## End of kitty installation <^-^>
 
-### Shell parts 01010101 XO
-dnf -y install ranger eza zsh htop btop
 #
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -171,6 +171,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ## oh-my-zsh config: load my powerlevel10k config ;)
 # Source: https://github.com/romkatv/powerlevel10k
 #
+wget https://raw.githubusercontent.com/felixdumaslavoie/BriefTielScripts/refs/heads/main/pl10kconf/.p10k.zsh
+wget https://raw.githubusercontent.com/felixdumaslavoie/BriefTielScripts/refs/heads/main/pl10kconf/.zshrc
+
 ## Extensive aliases section ;)
 alias gaa="git add --all"
 alias gc="git commit -am "
