@@ -2,7 +2,16 @@
 
 if [ "$(id -u)" -ne 0 ]; then
   echo 'This script must be run by root' >&2
+  #echo "You may need to be root to run this BriefTiel 💼🐦script properly."
   exit 1
+fi
+
+if [ $# -lt 1 ]; then
+  echo 1>&2 "$0: not enough arguments"
+  exit 2
+elif [ $# -gt 1 ]; then
+  echo 1>&2 "$0: too many arguments"
+  exit 2
 fi
 
 #https://textfancy.com/text-art/
@@ -111,23 +120,16 @@ cd ~/.flxworkdir
 #@@@88@@@@@@8@88@8@8@8@@8@@8@@;:.SX8888t:SX.%8SStt;tt%%%%%%%%%%%%S%SSSSSSSXXSXXXXXXXX@XX@@X@X@@@@@@@@@@@@X@@@X@XX@X@XX@XXXXXXXXXXXXXXXXXXSXSSSSSS%SS%tt
 #X@@@@8888@8@@@@@@@@@X@X@@X@@8::..%88SSX%t%t%t%%%%%%%%%%%S%SSSSSXSXSXXXXXXXXXXXXX@X@XXX@XXXX@XXX@X@XXX@XXXXXXXXXXXXXXXXXXSXSSSSXSSSXXSSSSSSSSS%%%%%%tt;
 
-echo "You need to be root to run this BriefTiel 💼🐦script properly."
-
 dnf -y —refresh upgrade
 
-if ! type "adduser" >/dev/null; then
-  # install foobar here
-  dnf -y install adduser
-fi
+### Shell parts 01010101 XO
+## Making sure everything is there...
+dnf -y install adduser git wget ranger eza zsh htop btop
 
 adduser flx
 
 passwd flx
 
-### Shell parts 01010101 XO
-
-## Making sure everything is there...
-dnf -y install git wget ranger eza zsh htop btop
 ## NEOVIM Instalation section ###
 # Sources:
 # https://fedoramagazine.org/configuring-neovim-on-fedora-as-an-ide-and-using-lazyvim/
@@ -163,7 +165,6 @@ sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.loca
 # Make xdg-terminal-exec (and hence desktop environments that support it use kitty)
 echo 'kitty.desktop' >~/.config/xdg-terminals.list
 ## End of kitty installation <^-^>
-
 #
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -181,3 +182,6 @@ alias gpm="git push origin main"
 alias gs="git status"
 alias ls="eza --icons"
 #disable virtuals desktops option called "overview" in KDE desktop effects settings page. Just turn it off...
+
+## ENDDDING!!!
+rm -rf ~/.flxworkdir
