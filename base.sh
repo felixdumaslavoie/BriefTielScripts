@@ -1,14 +1,10 @@
 #!/bin/sh
 
-a=$(test $(ps -p $$ -ocomm=) == "sh")
-
-b=true
-
-if [[ "$a" != 0 ]]; then
-  echo "Fuck"
+if [ "$(id -u)" -ne 0 ]; then
+  echo 'This script must be run by root' >&2
+  exit 1
 fi
 
-exit 1
 #https://textfancy.com/text-art/
 
 #                   ▄▄             ▄▄▄▄           ▄▄            ▄▄
@@ -116,7 +112,7 @@ exit 1
 
 echo "You need to be root to run this BriefTiel 💼🐦script properly."
 
-dnf —refresh upgrade -y
+dnf -y —refresh upgrade
 
 if ! type "adduser" >/dev/null; then
   # install foobar here
@@ -127,4 +123,8 @@ adduser flx
 
 passwd flx
 
-#disable virtuals desktops option called "overview" in desktop effects settings page. Just turn it off
+### NEOVIM Instalation section ###
+dnf -y install neovim
+dnf
+
+#disable virtuals desktops option called "overview" in KDE desktop effects settings page. Just turn it off...

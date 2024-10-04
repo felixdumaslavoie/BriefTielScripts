@@ -16,3 +16,8 @@ top --> btop || t
 git add --all && git commit -am "GENERATED HASH" && git push origin main --> gits || gp
 
 <https://github.com/ogham/exa>
+
+## Printaaa!!!
+MFCL8900CDW
+https://www.reddit.com/r/printers/comments/tjo32f/is_canon_imageclass_mf455dw_an_ok_printer/
+
