@@ -116,7 +116,7 @@ dnf -y —refresh upgrade
 
 if ! type "adduser" >/dev/null; then
   # install foobar here
-  dnf install adduser -y
+  dnf -y install adduser
 fi
 
 adduser flx
@@ -160,5 +160,18 @@ sed -i "s|Icon=kitty|Icon=$(readlink -f ~)/.local/kitty.app/share/icons/hicolor/
 sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
 # Make xdg-terminal-exec (and hence desktop environments that support it use kitty)
 echo 'kitty.desktop' >~/.config/xdg-terminals.list
+## End of kitty installation <^-^>
 
+dnf -y install ranger eza zsh htop btop
+#
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+## oh-my-zsh config: load my powerlevel10k config ;)
+# Source: https://github.com/romkatv/powerlevel10k
+#
+## Extensive aliases section ;)
+alias gaa="git add --all"
+alias gc="git commit -am"
+alias ls="eza --icons"
 #disable virtuals desktops option called "overview" in KDE desktop effects settings page. Just turn it off...
