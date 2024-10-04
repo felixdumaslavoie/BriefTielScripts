@@ -173,7 +173,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 #
 ## Extensive aliases section ;)
 alias gaa="git add --all"
-alias gc="git commit -am"
+alias gc="git commit -am "
 alias gpm="git push origin main"
+alias gs="git status"
 alias ls="eza --icons"
 #disable virtuals desktops option called "overview" in KDE desktop effects settings page. Just turn it off...
