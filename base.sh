@@ -124,10 +124,10 @@ dnf -y —refresh upgrade
 
 ### Shell parts 01010101 XO
 ## Making sure everything is there...
-dnf -y install adduser git wget ranger eza zsh htop btop
+dnf -y install adduser git wget ranger eza zsh htop btop ripgrep
 
 adduser flx
-
+# https://stackoverflow.com/questions/714915/using-the-passwd-command-from-within-a-shell-script
 passwd flx
 
 ## NEOVIM Instalation section ###
