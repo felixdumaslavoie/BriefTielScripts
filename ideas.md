@@ -25,3 +25,8 @@ MFCL8900CDW
 ## nvim
 
 <https://github.com/NvChad/menu?tab=readme-ov-file>
+export PATH="$HOME/.local/bin:$PATH"
+https://stackoverflow.com/questions/35898734/pip-installs-packages-successfully-but-executables-not-found-from-command-line
+echo "export PATH=\"`python3 -m site --user-base`/bin:\$PATH\"" >> ~/.bashrc
+source ~/.bashrc
+
