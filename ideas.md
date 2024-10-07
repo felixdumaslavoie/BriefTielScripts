@@ -31,6 +31,6 @@ echo "export PATH=\"`python3 -m site --user-base`/bin:\$PATH\"" >> ~/.bashrc
 source ~/.bashrc
 
 
-## Best terminal file manager: *lf*
+## Best terminal file managers: *lf* and *yazi*
 https://github.com/gokcehan/lf/wiki/Packages
-
+https://github.com/sxyazi/yazi
