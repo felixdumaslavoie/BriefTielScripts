@@ -30,3 +30,7 @@ https://stackoverflow.com/questions/35898734/pip-installs-packages-successfully-
 echo "export PATH=\"`python3 -m site --user-base`/bin:\$PATH\"" >> ~/.bashrc
 source ~/.bashrc
 
+
+## Best terminal file manager: *lf*
+https://github.com/gokcehan/lf/wiki/Packages
+
