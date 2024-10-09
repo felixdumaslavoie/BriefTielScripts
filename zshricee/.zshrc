@@ -1,3 +1,5 @@
+fastfetch
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -110,6 +112,10 @@ alias gc="git commit -am "
 alias gpm="git push origin main"
 alias gs="git status"
 alias ls="eza --icons -A"
+alias e="nvim "
+alias v="vim "
+
+
 
 # pnpm
 export PNPM_HOME="/home/flx/.local/share/pnpm"
