@@ -113,7 +113,7 @@ alias gpm="git push origin main"
 alias gs="git status"
 alias ls="eza --icons -A"
 alias e="nvim "
-alias v="vim "
+alias v="vi "
 
 
 
