@@ -34,3 +34,9 @@ source ~/.bashrc
 ## Best terminal file managers: *lf* and *yazi*
 https://github.com/gokcehan/lf/wiki/Packages
 https://github.com/sxyazi/yazi
+
+## Better than oh-my-zsh?
+https://ohmyposh.dev/
+
+##zsh-vi-mode
+https://github.com/jeffreytse/zsh-vi-mode?tab=readme-ov-file#%EF%B8%8F-installation

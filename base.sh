@@ -124,7 +124,19 @@ dnf -y —refresh upgrade
 
 ### Shell parts 01010101 XO
 ## Making sure everything is there...
-dnf -y install adduser git wget ranger eza zsh htop btop ripgrep vifm
+dnf -y install adduser git wget ranger eza zsh htop btop ripgrep vifm fzf fastfetch
+
+## Installing rust!!!
+### src: https://rustup.rs/
+#### https://www.reddit.com/r/archlinux/comments/a73s5c/difference_between_rust_and_rustup_provider_for/
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup update
+
+### The path may need to be reloaded after Rust install at this point?
+
+## Installing Yazi from crates.io
+### src: https://yazi-rs.github.io/docs/installation/
+cargo install --locked yazi-fm yazi-cli
 
 adduser flx
 # https://stackoverflow.com/questions/714915/using-the-passwd-command-from-within-a-shell-script

@@ -105,6 +105,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gaa="git add --all"
+alias gc="git commit -am "
+alias gpm="git push origin main"
+alias gs="git status"
+alias ls="eza --icons -A"
 
 # pnpm
 export PNPM_HOME="/home/flx/.local/share/pnpm"
