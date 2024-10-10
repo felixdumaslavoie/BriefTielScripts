@@ -40,3 +40,7 @@ https://ohmyposh.dev/
 
 ##zsh-vi-mode
 https://github.com/jeffreytse/zsh-vi-mode?tab=readme-ov-file#%EF%B8%8F-installation
+##zoxide better cd!!!
+https://www.youtube.com/watch?v=aghxkpyRVDY
+https://www.youtube.com/watch?v=DzNmUNvnB04
+
