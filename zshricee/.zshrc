@@ -114,7 +114,7 @@ alias gs="git status"
 alias ls="eza --icons -A"
 alias e="nvim "
 alias v="vi "
-
+alias rd="pnpm run dev"
 
 
 # pnpm
